@@ -25,3 +25,23 @@ inner `mysite/`
 
 `mysite/wsgi.py`
 * Entry point for WSGI-compatible web servers to serve your project.
+
+Pre-Installed Apps with Django
+1. admin
+2. auth
+3. contenttypes
+4. sessions
+5. messages
+6. staticfiles
+
+### Some of the apps make use of at least one database table and for that reason we need to run below command.
+```
+python manage.py migrate
+```
+
+The above commands looks at the *INSTALLED_APPS* in `settings.py` and creates required databases.
+
+Notes:
+* By default, django comes with a pre configured database(sqlite)
+* Django follows the DRY principle.
+* 
